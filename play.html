@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
         <title>SIMON</title>
         <link rel="icon" href="simonicon.ico"/>
 
@@ -25,13 +25,17 @@
                 <a class="navbar-brand" href="#">SIMON<sup>&reg;</sup></a>
                 <menu class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a></li>
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="play.html">Play</a></li>
+                      <a class="nav-link active" href="play.html">Play</a>
+                    </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="scores.html">Scores</a></li>
+                      <a class="nav-link" href="scores.html">Scores</a>
+                    </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="about.html">About</a></li>
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
                   </menu>
             </nav>
         </header>
@@ -40,14 +44,17 @@
             <div class="players">
                 Player:
                 <span class="player-name">"[YOU]"</span>
-                <input type="text" id="count" value="--" readonly />
+                <!-- Place holder before JS implementation -->
+                <!--  <input type="text" id="count" value="--" readonly /> -->
             </div>
             <div class="game">
                 <div class="button-container">
-                  <button class="button-top-left"></button>
-                  <button class="button-top-right"></button>
-                  <button class="button-bottom-left"></button>
-                  <button class="button-bottom-right"></button>
+                <!-- buttons are discovered in the JavaScript by selecting the game-button class -->
+                <!-- onclick triggers a button push interaction -->
+                  <button class="button-top-left" onclick="game.pressButton(this)"></button>
+                  <button class="button-top-right" onclick="game.pressButton(this)"></button>
+                  <button class="button-bottom-left" onclick="game.pressButton(this)"></button>
+                  <button class="button-bottom-right" onclick="game.pressButton(this)"></button>
                   <div class="controls center">
                     <div class="game-name">Simon<sup>&reg;</sup></div>
                     <div class="score center">--</div>
@@ -67,5 +74,8 @@
                 </a>
             </div>
         </footer>
+        
+      <!-- Script is located at the bottom because it references HTML elements during initialization -->
+      <script src="play.js"></script>
     </body>
 </html>
