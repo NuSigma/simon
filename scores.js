@@ -13,12 +13,12 @@ function loadScores()
     {
         for (const [i, score] of scores.entries())
         {
-            const positionalTdEl = document.createElement('td');
+            const positionTdEl = document.createElement('td');
             const nameTdEl = document.createElement('td');
             const scoreTdEl = document.createElement('td');
             const dateTdEl = document.createElement('td');
 
-            positionalTdEl.textContent = i +1;
+            positionTdEl.textContent = i +1;
             nameTdEl.textContent = score.name;
             scoreTdEl.textContent = score.score;
             dateTdEl.textContent = score.date;
