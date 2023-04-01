@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=devoce-width, initial-scale=1.0"/>
         <title>About</title>
         <link rel="icon" href="simonicon.ico"/>
-
+        
+        <script src="about.js"></script>
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="about.css"/>
 
         <!-- Include bootstrap CSS framework -->
         <link
@@ -36,6 +38,8 @@
 
         <main class="container-fluid bg-secondary text-center">
             <div>
+                <div id="picture" class="picture-box"></div>
+
                 <p>
                     Simon is a memory game where you repeat back a color sequence shown 
                     until you make a mistake. The longer the sequence successfully 
@@ -47,15 +51,18 @@
                     use of the name and the game is for non-profit educational use only. No
                     part of this code or program should be used outside of that definition.
                 </p>
+
+                <div id="quote" class="quote-box bg-light text-dark"></div>
             </div>
         </main>
         
         <footer class="bg-dark text-dark text-muted">
             <div class="container-fluid">
                 <span class="text-reset">Dylan Bailey - BYU CS260</span>
-                <a class="text-reset"
-                href="https://github.com/NuSigma/simon">
-                GitHub
+                <a 
+                    class="text-reset"
+                    href="https://github.com/NuSigma/simon">
+                    GitHub
                 </a>
             </div>
         </footer>
