@@ -6,7 +6,7 @@ function peerProxy(httpServer)
     //create a websocket object
     const wss = new WebSocketServer({ noServer: true });
 
-    //Handle protocol upgrade from HTTp to WebSocket
+    //Handle protocol upgrade from HTTP to WebSocket
     httpServer.on('upgrade', (request, socket, head) => {
         wss.handleUpgrade(request, socket, head, function done(ws) 
         {
@@ -55,8 +55,7 @@ function peerProxy(httpServer)
             if (!c.alive)
             {
                 c.ws.terminate();
-            }
-            else
+            } else
             {
                 c.alive = false;
                 c.ws.ping();
